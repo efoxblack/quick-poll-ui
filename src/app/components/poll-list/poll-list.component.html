@@ -1,0 +1,16 @@
+<div class="container">
+    <table class="table table-bordered table-inverse">
+        <tr>
+            <th>Poll Question</th>
+            <th>Poll Options</th>
+        </tr>
+        <tr *ngFor="let poll of polls">
+            <td>
+                <a [routerLink]="['/polls', poll.id]">{{ poll.question }}</a>
+            </td>
+            <td>
+                {{ poll.options }}
+            </td>
+        </tr>
+    </table>
+</div>
